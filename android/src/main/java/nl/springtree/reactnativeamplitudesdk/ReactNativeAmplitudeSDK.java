@@ -20,12 +20,12 @@ import org.json.JSONObject;
 
 import java.util.Map;
 
-public class AmplitudeAndroidSDK extends ReactContextBaseJavaModule {
+public class AmplitudeSDKAndroid extends ReactContextBaseJavaModule {
 
   private Activity mActivity = null;
   private Application mApplication = null;
 
-  public AmplitudeAndroidSDK(ReactApplicationContext reactContext, Application mApplication) {
+  public AmplitudeSDKAndroid(ReactApplicationContext reactContext, Application mApplication) {
     super(reactContext);
     this.mActivity = getCurrentActivity();
     this.mApplication = mApplication;
@@ -33,7 +33,7 @@ public class AmplitudeAndroidSDK extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "AmplitudeAndroidSDK";
+    return "AmplitudeSDKAndroid";
   }
 
   @ReactMethod

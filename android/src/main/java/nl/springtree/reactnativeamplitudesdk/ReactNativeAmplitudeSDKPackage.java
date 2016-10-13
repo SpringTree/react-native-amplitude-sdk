@@ -11,11 +11,11 @@ import com.facebook.react.uimanager.ViewManager;
 
 import java.util.*;
 
-public class AmplitudeAndroidSDKPackage implements ReactPackage {
+public class AmplitudeSDKAndroidPackage implements ReactPackage {
 
     private Application mApplication = null;
 
-    public AmplitudeAndroidSDKPackage(Application application) {
+    public AmplitudeSDKAndroidPackage(Application application) {
         mApplication = application;
     }
 
@@ -23,7 +23,7 @@ public class AmplitudeAndroidSDKPackage implements ReactPackage {
     public List<NativeModule> createNativeModules(
             ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new AmplitudeAndroidSDK(reactContext,this.mApplication));
+        modules.add(new AmplitudeSDKAndroid(reactContext,this.mApplication));
         return modules;
     }
 
