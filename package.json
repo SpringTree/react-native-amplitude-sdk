@@ -1,0 +1,22 @@
+{
+  "name": "react-native-amplitude-sdk",
+  "version": "0.1.0",
+  "description": "Native Bindings for the Amplitude Library",
+  "keywords": [
+    "react-native",
+    "react",
+    "react-component",
+    "amplitude",
+    "analytics",
+    "ios",
+    "android"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/springtree/react-native-amplitude-sdk.git"
+  },
+  "author": "SpringTree B.V.",
+  "dependencies": {
+    "fbjs": "^0.8.5"
+  }
+}
