@@ -38,7 +38,23 @@ public class AmplitudeSDKAndroid extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void initialize(String apiKey) {
+		Amplitude.getInstance().trackSessionEvents(bool);
     Amplitude.getInstance().initialize(getCurrentActivity(), apiKey).enableForegroundTracking(this.mApplication);
+  }
+
+  @ReactMethod
+  public void setUserId(String id) {
+    Amplitude.getInstance().setUserId(id);
+  }
+
+	@ReactMethod
+  public void setUserProperties(ReadableMap properties) {
+    try {
+      JSONObject jProperties = convertReadableToJsonObject(properties);
+      Amplitude.getInstance().setUserProperties(jProperties);
+    } catch (JSONException e) {
+      return;
+    }
   }
 
   @ReactMethod
@@ -56,16 +72,6 @@ public class AmplitudeSDKAndroid extends ReactContextBaseJavaModule {
       return;
     }
 
-  }
-
-  @ReactMethod
-  public void trackSessionEvents(boolean bool) {
-    Amplitude.getInstance().trackSessionEvents(bool);
-  }
-
-  @ReactMethod
-  public void setUserId(String id) {
-    Amplitude.getInstance().setUserId(id);
   }
 
   @ReactMethod
