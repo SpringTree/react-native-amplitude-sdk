@@ -4,4 +4,6 @@
  */
 'use strict';
 
-module.exports = require('NativeModules').AmplitudeSDKiOS;
+var { NativeModules } = require('react-native');
+
+module.exports = NativeModules.AmplitudeSDKiOS;

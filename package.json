@@ -15,6 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/springtree/react-native-amplitude-sdk.git"
   },
+  "main": "AmplitudeSDK",
   "author": "SpringTree B.V.",
   "dependencies": {
     "fbjs": "^0.8.5"
